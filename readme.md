@@ -6,6 +6,9 @@
 
 [https://www.coolapk.com/apk/com.wrbug.wankehelper][1]
 
+## 官方交流群
+
+[群号:604154857][5]
 
 ## 感谢
 
@@ -26,3 +29,4 @@
 [2]: https://github.com/ImbaQ/MyLinkToken_js
 [3]: https://github.com/friends110110/Ethereum-App
 [4]: https://github.com/ImbaQ/MyLinkToken
+[5]: https://jq.qq.com/?_wv=1027&k=5RObLoJ
