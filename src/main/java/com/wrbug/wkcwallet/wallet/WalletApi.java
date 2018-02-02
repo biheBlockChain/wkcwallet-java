@@ -1,4 +1,4 @@
-package com.wrbug.wkcwallet;
+package com.wrbug.wkcwallet.wallet;
 
 
 import java.io.IOException;

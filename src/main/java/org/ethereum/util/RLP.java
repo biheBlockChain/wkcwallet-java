@@ -1,7 +1,6 @@
 package org.ethereum.util;
  
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 import org.spongycastle.util.encoders.Hex;
 
 import java.math.BigInteger;
@@ -44,7 +43,6 @@ import static org.spongycastle.util.BigIntegers.asUnsignedByteArray;
  */
 public class RLP {
 
-    private static final Logger logger = LoggerFactory.getLogger("rlp");
 
 
     /**
@@ -358,8 +356,7 @@ public class RLP {
                     int length = calcLength(lengthOfLength, msgData, pos);
 
                     // now we can parse an item for data[1]..data[length]
-                    logger.debug("-- level: [" + level
-                            + "] Found big list length: " + length);
+
 
                     fullTraverse(msgData, level + 1, pos + lengthOfLength + 1,
                             pos + lengthOfLength + length, levelToIndex, index);
@@ -373,8 +370,7 @@ public class RLP {
 
                     byte length = (byte) ((msgData[pos] & 0xFF) - OFFSET_SHORT_LIST);
 
-                    logger.debug("-- level: [" + level
-                            + "] Found small list length: " + length);
+
 
                     fullTraverse(msgData, level + 1, pos + 1, pos + length + 1,
                             levelToIndex, index);
@@ -391,9 +387,7 @@ public class RLP {
                     byte lengthOfLength = (byte) (msgData[pos] - OFFSET_LONG_ITEM);
                     int length = calcLength(lengthOfLength, msgData, pos);
 
-                    // now we can parse an item for data[1]..data[length]
-                    logger.debug("-- level: [" + level
-                            + "] Found big item length: " + length);
+
                     pos += lengthOfLength + length + 1;
 
                     continue;
@@ -405,22 +399,19 @@ public class RLP {
 
                     byte length = (byte) ((msgData[pos] & 0xFF) - OFFSET_SHORT_ITEM);
 
-                    logger.debug("-- level: [" + level
-                            + "] Found small item length: " + length);
+
                     pos += 1 + length;
                     continue;
                 }
                 // null item
                 if ((msgData[pos] & 0xFF) == OFFSET_SHORT_ITEM) {
-                    logger.debug("-- level: [" + level
-                            + "] Found null item: ");
+
                     pos += 1;
                     continue;
                 }
                 // single byte item
                 if ((msgData[pos] & 0xFF) < OFFSET_SHORT_ITEM) {
-                    logger.debug("-- level: [" + level
-                            + "] Found single item: ");
+
                     pos += 1;
                     continue;
                 }
@@ -488,7 +479,7 @@ public class RLP {
 
             while (pos < endPos) {
 
-                logger.debug("fullTraverse: level: " + level + " startPos: " + pos + " endPos: " + endPos);
+
 
 
                 // It's a list with a payload more than 55 bytes

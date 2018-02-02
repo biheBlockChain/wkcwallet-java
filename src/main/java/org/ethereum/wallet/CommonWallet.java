@@ -247,8 +247,8 @@ public class CommonWallet implements Wallet {
     }
 
     @Override
-    public String toV3(String password) throws NoSuchAlgorithmException {
-        return toV3(password, mN, 1, 8);
+    public String toV3(String password) {
+        return toV3(password, mN, 6, 8);
     }
 
     @Override

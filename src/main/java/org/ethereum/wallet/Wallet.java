@@ -81,7 +81,7 @@ public interface Wallet {
      * @return
      * @throws NoSuchAlgorithmException 
      */
-    public String toV3(String password) throws NoSuchAlgorithmException;
+    public String toV3(String password) ;
 
     public String toV3(String password, int n, int p, int r) throws NoSuchAlgorithmException, NoSuchPaddingException;
 }
