@@ -1,4 +1,4 @@
-# java版玩客币钱包交易系统
+# java版玩客币钱包简易交易系统  链克钱包
 
 > 该项目只简单实现转账功能，大陆地区由于ip限制，请挂VPN使用
 
@@ -11,6 +11,16 @@
 [https://github.com/ImbaQ/MyLinkToken_js][2] 提供油价参数
 [https://github.com/friends110110/Ethereum-App][3] 提供转账方案
 
+## 其他链克钱包项目
+
+### js版
+[https://github.com/ImbaQ/MyLinkToken_js][2]  
+
+### C#版
+
+[https://github.com/ImbaQ/MyLinkToken][4]
+
 [1]: https://www.coolapk.com/apk/com.wrbug.wankehelpe
 [2]: https://github.com/ImbaQ/MyLinkToken_js
 [3]: https://github.com/friends110110/Ethereum-App
+[4]: https://github.com/ImbaQ/MyLinkToken
