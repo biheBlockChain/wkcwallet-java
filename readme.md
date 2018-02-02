@@ -10,6 +10,18 @@
 
 [群号:604154857][5]
 
+
+## 打赏
+
+如果项目对你有用，请用链克打赏我，地址：
+
+**0x9a3f8bc4bc644e7626292c74cbe17d9ebaaace75**
+
+## 关注博客
+
+[https://www.wrbug.com][6]
+
+
 ## 感谢
 
 [https://github.com/ImbaQ/MyLinkToken_js][2] 提供油价参数
@@ -30,3 +42,4 @@
 [3]: https://github.com/friends110110/Ethereum-App
 [4]: https://github.com/ImbaQ/MyLinkToken
 [5]: https://jq.qq.com/?_wv=1027&k=5RObLoJ
+[6]: https://www.wrbug.com
