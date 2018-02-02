@@ -18,6 +18,9 @@ import java.security.SignatureException;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicLong;
 
+/**
+ * 钱包交易
+ */
 public class Trade {
     static String keystore;
     static String password;

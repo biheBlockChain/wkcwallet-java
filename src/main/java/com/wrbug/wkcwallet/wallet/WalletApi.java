@@ -20,9 +20,57 @@ import okhttp3.Response;
  */
 public class WalletApi {
 
+    /**
+     * 获取余额
+     *
+     * @param address
+     * @return
+     */
+    public static WalletBalanceVo getBalance(String address) {
+        WalletApiRequestVo walletApiRequestVo = new WalletApiRequestVo();
+        walletApiRequestVo.setJsonrpc("2.0")
+                .setMethod("eth_getBalance")
+                .addParam(address)
+                .addParam("latest")
+                .setId(11);
+        try {
+            Response response = HttpUtil.postWalletApi(walletApiRequestVo);
+            String json = response.body().string();
+            WalletBalanceVo walletBalanceVo = JsonHelper.fromJson(json, WalletBalanceVo.class);
+            return walletBalanceVo;
+        } catch (IOException e) {
+
+        }
+        return null;
+    }
+
+    /**
+     * 获取交易记录
+     *
+     * @param address
+     * @return
+     */
+    public static TransactionRecordsVo getTransactionRecords(String address) {
+        List<String> data = new ArrayList<>();
+        data.add(address);
+        data.add("0");
+        data.add("0");
+        data.add("1");
+        data.add("100");
+        try {
+            Response response = HttpUtil.postWalletApi("getTransactionRecords", JsonHelper.toJson(data));
+            String json = response.body().string();
+            TransactionRecordsVo transactionRecordsVo = JsonHelper.fromJson(json, TransactionRecordsVo.class);
+            return transactionRecordsVo;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
     /**
      * 获取交易次数
+     *
      * @param address
      * @return
      */
@@ -46,6 +94,7 @@ public class WalletApi {
 
     /**
      * 发送交易
+     *
      * @param hash
      * @param callback
      */
@@ -69,7 +118,6 @@ public class WalletApi {
         }
         callback.onFailed();
     }
-
 
 
     public interface TransactionCallback {

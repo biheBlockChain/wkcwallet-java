@@ -9,6 +9,9 @@ import org.ethereum.wallet.CommonWallet;
 import java.io.File;
 import java.util.Scanner;
 
+/**
+ * 钱包生成
+ */
 public class Create {
     static Scanner scanner = new Scanner(System.in);
     static String password;
