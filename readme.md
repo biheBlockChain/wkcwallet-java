@@ -6,6 +6,10 @@
 
 [https://www.coolapk.com/apk/com.wrbug.wankehelper][1]
 
+** 独立版钱包。支持链克。IMT等多个币种
+
+[https://www.token.soy/][8]
+
 ## 官方交流群
 
 [群号:604154857][5]
@@ -48,4 +52,4 @@
 [5]: https://jq.qq.com/?_wv=1027&k=5RObLoJ
 [6]: https://www.wrbug.com
 [7]: https://www.wrbug.com/2018/02/02/%E6%89%8B%E6%92%B8%E4%B8%80%E6%AC%BE%E7%AC%AC%E4%B8%89%E6%96%B9%E9%93%BE%E5%85%8B%E9%92%B1%E5%8C%85/
-
+[8]: https://www.token.soy/
