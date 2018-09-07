@@ -34,7 +34,7 @@ public class WalletApi {
                 .addParam("latest")
                 .setId(11);
         try {
-            Response response = HttpUtil.postWalletApi(walletApiRequestVo);
+            Response response = HttpUtil.postWalletApi("getBalance",walletApiRequestVo);
             String json = response.body().string();
             WalletBalanceVo walletBalanceVo = JsonHelper.fromJson(json, WalletBalanceVo.class);
             return walletBalanceVo;
@@ -82,7 +82,7 @@ public class WalletApi {
                 .addParam("pending")
                 .setId(1);
         try {
-            Response response = HttpUtil.postWalletApi(walletApiRequestVo);
+            Response response = HttpUtil.postWalletApi("getTransactionCount",walletApiRequestVo);
             String json = response.body().string();
             TransactionCountVo transactionCountVo = JsonHelper.fromJson(json, TransactionCountVo.class);
             return transactionCountVo;
@@ -108,7 +108,7 @@ public class WalletApi {
                 .add("Nc", "IN")
                 .build();
         try {
-            Response response = HttpUtil.postWalletApi(walletApiRequestVo, headers);
+            Response response = HttpUtil.postWalletApi("sendRawTransaction",walletApiRequestVo, headers);
             String json = response.body().string();
             TransactionVo transactionVo = JsonHelper.fromJson(json, TransactionVo.class);
             callback.onSuccess(transactionVo);

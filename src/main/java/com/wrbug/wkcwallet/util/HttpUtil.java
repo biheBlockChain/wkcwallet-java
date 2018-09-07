@@ -11,7 +11,10 @@ import java.util.Map;
 
 public class HttpUtil {
     private static final String WALLET_URL = "https://walletapi.onethingpcs.com";
-
+    public static Response postWalletApi(String path,WalletApiRequestVo data) throws IOException {
+        String json = data.toJson();
+        return postWalletApi(path, json, null);
+    }
     public static Response postWalletApi(WalletApiRequestVo data) throws IOException {
         String json = data.toJson();
         return postWalletApi("", json, null);
